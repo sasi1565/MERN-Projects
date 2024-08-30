@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+::-webkit-scrollbar {  
+  width: 12px; /* width of the scrollbar */  
+  height: 12px; /* height of the scrollbar */  
+}  
+::-webkit-scrollbar-thumb {  
+  background: #d2ffff; /* color of the scrollbar handle */  
+  border-radius: 6px; /* roundness of the handle */  
+} 
+body {
+  /* background-image: linear-gradient(to right,rgb(70, 77, 205),white); */
+  background-image: linear-gradient(to right,#d2ffff  ,#0694c6);
+  background-size: cover;
+  background-position: center;
+  max-height: 100vh;
+  width: auto;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  overflow: hidden;
+}
+
+
+.container {
+  max-width: 500px; 
+  max-height: 95vh;
+  background-color: rgba(255, 255, 255, 0.416);
+  margin: 0 auto;
+  margin-top: 5%;
+  border-radius: 15px ;
+  backdrop-filter: blur(10px);
+  box-sizing: border-box;
+  animation: appear 1s linear;
+}
+
+form {
+  display: flex;
+  justify-content:center;
+  width: 100%;
+}
+
+.container form button {
+  background: none;
+  border: none ;
+  height: 10px;
+  width: 10px;
+  margin-top: 10%;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.container form button span {
+  font-size: 30px;
+  color: white;
+  transition: 400ms ease-in;
+}
+.container form button span:hover {
+  font-size: 45px;
+  transition: 400ms ease-in-out;
+  text-shadow: 2px 2px 5px #0e759b;
+
+}
+.container form input[type="text"]{
+  border: none;
+  border-radius: 7px;
+  height: 30px;
+  width: 70%;
+  margin-top: 10%;
+  transition: 400ms;
+  outline: none;
+  padding: 5px;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.to-do-list-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 85vh;
+}
+.container form input:focus[type="text"] {
+  box-shadow:0px 0px 15px 10px #6cbad7;
+  height: 35px;
+  width: 75%;
+  transition: 400ms ease;
+}
+
+.container .listArea {
+  width: 80%;
+}
+
+h1 {
+  position: relative; /* Make sure the h1 is positioned relative to its normal position */
+  display: inline-block; /* Ensure the h1 is treated as a block element, but keeps its natural width */
+  margin-bottom: 20px; /* Optional: adds some space between the h1 and the line */
+}
+
+h1:after {
+  content: "";
+  display: block; 
+  height: 7px;
+  background-color: #00a9e7;
+  border-radius: 0px 10px 10px 0px;
+  animation: appear-right 1.2s linear;
+}
+
+.task-area {
+  width: 100%;
+  max-height: 55vh;
+  overflow-y: scroll;
+}
+
+
+.task {
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(30px);
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task input[type="text"] {
+  border: none;
+  border-radius: 7px;
+  height: 20px;
+  width: 70%;
+  transition: 400ms;
+  outline: none;
+  padding: 5px;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.task input[type="text"]:focus {
+  box-shadow:0px 0px 8px 2px #6cbad7;
+  transition: 400ms ease;
+}
+
+.task button {
+  background: none;
+  border: none;
+}
+.task button span {
+  font-size: 30px;
+  color: black;
+  transition: 300ms ease-in;
+}
+
+.task button span:hover {
+  font-size: 35px;
+  transition: 300ms ease-in-out;
+  text-shadow: 2px 2px 5px #0e759b;
+}
+
+.task p {
+  margin: 10px !important;
+  padding: 5px;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5s;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes appear-right {
+  from {
+    width:50px
+  }
+  to {
+    width: 100px;
+  }
+
+
+}
